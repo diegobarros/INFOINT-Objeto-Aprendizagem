@@ -8,6 +8,7 @@ gem 'rails', '3.2.8'
 gem 'pg'
 gem 'activeadmin'
 gem "meta_search"
+gem 'galetahub-simple_captcha', :require => 'simple_captcha', :git => 'git://github.com/galetahub/simple-captcha.git'
 
 
 # Gems used only for assets and not required

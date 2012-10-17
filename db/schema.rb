@@ -150,6 +150,15 @@ ActiveRecord::Schema.define(:version => 20121017170814) do
 
   add_index "respostas", ["pergunta_id"], :name => "index_respostas_on_pergunta_id"
 
+  create_table "simple_captcha_data", :force => true do |t|
+    t.string   "key",        :limit => 40
+    t.string   "value",      :limit => 6
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+  end
+
+  add_index "simple_captcha_data", ["key"], :name => "idx_key"
+
   create_table "teclados", :force => true do |t|
     t.integer  "idioma_id"
     t.string   "padrao"
